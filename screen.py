@@ -13,3 +13,6 @@ def random_bush():
     bush_y = random.randint(consts.SCREEN_HEIGHT+1)
     screen.bilt(grass,(bush_x,bush_y))
 
+
+pygame.image.load(soldier.png)
+
