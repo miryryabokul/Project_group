@@ -11,4 +11,5 @@ def normal_screen():
 def random_bush():
     bush_x = random.randint(consts.SCREEN_WIDTH+1)
     bush_y = random.randint(consts.SCREEN_HEIGHT+1)
+    screen.bilt(grass,(bush_x,bush_y))
 
