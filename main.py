@@ -6,11 +6,10 @@ def main():
     pygame.init()
 
 def on_press(key):
-        #handle pressed keys
-        pass
+    key_input = input()
+    pass
 
 def on_release(key):
-    #handle released keys
     if(key==Key.enter):
         function_x()
 
