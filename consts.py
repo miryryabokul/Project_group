@@ -15,17 +15,20 @@ OPENING_MESSAGE_LOCATION = (20, 0)
 FLAG_LOCATION = (SCREEN_HEIGHT - 30)
 
 
-GRASS_IMG = pygame.image.load('grass.png')
-GRASS_IMG = pygame.transform.scale(GRASS_IMG, (40, 20))
+GRASS = pygame.image.load('grass.png')
+GRASS = pygame.transform.scale(GRASS, (40, 20))
 
-SOLDIER_IMG = pygame.image.load('soldier.png')
-SOLDIER_IMG = pygame.transform.scale(SOLDIER_IMG, (20, 40))
+SOLDIER = pygame.image.load('soldier.png')
+SOLDIER = pygame.transform.scale(SOLDIER, (20, 40))
 
-SNAKE_IMG = pygame.image.load('snake.png')
-SNAKE_IMG = pygame.transform.scale(SNAKE_IMG, (40, 20))
+SNAKE = pygame.image.load('snake.png')
+SNAKE = pygame.transform.scale(SNAKE, (40, 20))
 
-INJURY_IMG = pygame.image.load('injury.png')
-INJURY_IMG = pygame.transform.scale(INJURY_IMG, (20, 40))
+INJURY = pygame.image.load('injury.png')
+INJURY = pygame.transform.scale(INJURY, (20, 40))
+
+MINE = pygame.image.load('mine.png')
+MINE = pygame.transform.scale(MINE, (30, 10))
 
 MINE_IMG = pygame.image.load('mine.png')
 MINE_IMG = pygame.transform.scale(MINE_IMG, (30, 10))

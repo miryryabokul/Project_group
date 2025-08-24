@@ -12,6 +12,7 @@ def main():
     pygame.quit()
 
 
+
 def key_control ():
     key_input = input()
     check = pygame.key.get_focused(key_input)
