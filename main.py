@@ -1,20 +1,13 @@
 import pygame
-from pynput import keyboard
-from pynput.keyboard import Key
 
 def main():
     pygame.init()
 
-def on_press(key):
+def key_control ():
     key_input = input()
-    pass
-
-def on_release(key):
-    if(key==Key.enter):
-        function_x()
-
-with keyboard.Listener(on_press=on_press,on_release=on_release) as listener:
-        listener.join()
+    check = pygame.key.get_focused(key_input)
+    if check:
+        pygame.key.get_mods(key_input)
 
 
 if __name__ == "__main__":

@@ -14,5 +14,4 @@ def random_bush():
     screen.bilt(grass,(bush_x,bush_y))
 
 
-pygame.image.load(soldier.png)
 
