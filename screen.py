@@ -1,5 +1,4 @@
 import random
-
 import pygame
 import consts
 screen = pygame.display.set_mode((consts.SCREEN_WIDTH,consts.SCREEN_HEIGHT))
@@ -16,12 +15,11 @@ def draw_random(picture):
     y = random.randrange(consts.SCREEN_HEIGHT + 1)
     screen.blit(picture, (x, y))
     pygame.display.flip()
-#
-# def matrix_screen():
-#     pygame.draw.rect(screen,color,(x,y))
-#     for row in matrix:
-#         for item in row:
-#             pygame.draw.rect(screen, color, (row,item), 1)
-#     for j in range(20):
-#         pass
+
+def draw_matrix_screen():
+    for row in range(consts.MAT_ROW):
+        for cell in range(consts.MAT_COL):
+            rect = pygame.rect(row,cell)
+            pygame.draw.rect(screen,WHITE, rect)
+
 

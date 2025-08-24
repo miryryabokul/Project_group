@@ -1,7 +1,7 @@
 import pygame
 
 INITIAL_PLACE = (0, 0)
-DEFAULT_BACKGROUND_COLOR = (138, 201, 38)
+DEFAULT_BACKGROUND_COLOR = (1, 90, 37)
 SCREEN_WIDTH=800
 SCREEN_HEIGHT=600
 MAT_ROW = 25
@@ -19,7 +19,7 @@ Y_LOCATION = 0
 
 
 GRASS = pygame.image.load('grass.png')
-GRASS = pygame.transform.scale(GRASS, (40, 20))
+GRASS = pygame.transform.scale(GRASS, (45, 50))
 
 SOLDIER = pygame.image.load('soldier.png')
 SOLDIER = pygame.transform.scale(SOLDIER, (20, 40))

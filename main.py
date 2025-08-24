@@ -8,7 +8,7 @@ def main():
     pygame.init()
     screen.normal_screen()
     while True:
-
+        handle_user_event()
 
 
 
@@ -21,9 +21,10 @@ def handle_user_event():
             break
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ENTER:
-            # switch for 1 sec to the dark screen
 
-            elif event.key == pygame.K_RIGHT:
+
+
+            if event.key == pygame.K_RIGHT:
                if consts.X_LOCATION != consts.MAT_COL - 1:
                    consts.X_LOCATION += 1
 
