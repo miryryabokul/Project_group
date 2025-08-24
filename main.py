@@ -1,7 +1,16 @@
 import pygame
+import screen
+
 
 def main():
     pygame.init()
+    screen.normal_screen()
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                break
+    pygame.quit()
+
 
 def key_control ():
     key_input = input()
