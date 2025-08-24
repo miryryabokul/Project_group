@@ -21,7 +21,8 @@ def handle_user_event():
             break
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ENTER:
-
+                screen.draw_matrix_screen()
+                pygame.time.wait(1000)
 
 
             if event.key == pygame.K_RIGHT:

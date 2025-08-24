@@ -10,6 +10,10 @@ def normal_screen():
     for i in range(20):
         draw_random(consts.GRASS)
 
+    draw_matrix_screen()
+    pygame.display.flip()
+
+
 def draw_random(picture):
     x = random.randrange(consts.SCREEN_WIDTH + 1)
     y = random.randrange(consts.SCREEN_HEIGHT + 1)
@@ -17,9 +21,11 @@ def draw_random(picture):
     pygame.display.flip()
 
 def draw_matrix_screen():
-    for row in range(consts.MAT_ROW):
-        for cell in range(consts.MAT_COL):
-            rect = pygame.rect(row,cell)
-            pygame.draw.rect(screen,WHITE, rect)
+    ((consts.SCREEN_WIDTH,consts.SCREEN_HEIGHT))
+
+    for row in range(0,1200,24):
+        for cell in range(0,800,32):
+            rect=pygame.Rect(row, cell,24,32)
+            pygame.draw.rect(screen,consts.DEFAULT_BACKGROUND_COLOR,rect,1)
 
 
