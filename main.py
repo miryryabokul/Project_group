@@ -11,17 +11,18 @@ def main():
     pygame.display.flip()
     while game:
         handle_user_event(game)
-    pygame.quit()
-    sys.exit()
 
 def handle_user_event(game):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game=False
+            pygame.quit()
+            sys.exit()
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_ENTER:
                 screen.draw_matrix_screen()
                 pygame.time.wait(1000)
+
 
             if event.key == pygame.K_RIGHT:
                if consts.X_LOCATION != consts.MAT_COL - 1:
