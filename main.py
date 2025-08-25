@@ -4,6 +4,8 @@ import screen
 import consts
 import sys
 
+import soldier
+
 
 def main():
     game = True
@@ -19,7 +21,6 @@ def main():
         game, soldier_location = handle_user_event(game, soldier_location,
                                                    grass_location,
                                                    mine_location)
-
 
 def handle_user_event(game, soldier_location, grass, mine):
     for event in pygame.event.get():
