@@ -45,9 +45,17 @@ def random_location():
     return grass_location, mine_location
 
 
-def check_win(soldier, flag):
-    for i in range(soldier):
-        if soldier[-1].colliderect(flag):
+def check_lose (soldier, mine):
+    for i in range (soldier):
+        if soldier[-1].colliderect(mine):
             #      print lose message for 3 sec
             pygame.quit()
             sys.exit()
+
+def check_win (soldier, flag):
+    for i in range (soldier):
+        if soldier[-1].colliderect(flag):
+            #      print win message for 3 sec
+            pygame.quit()
+            sys.exit()
+
