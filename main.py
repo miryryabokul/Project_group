@@ -5,42 +5,52 @@ import sys
 
 def main():
     game=True
+    clock = pygame.time.Clock()
     pygame.init()
     grass=screen.grass()
-    screen.background_normal(grass)
+    screen.background_normal(grass,[0,0])
+    soldier_location=[0,0]
     pygame.display.flip()
     while game:
-        handle_user_event(game)
+        game,soldier_location=handle_user_event(game,soldier_location)
 
-def handle_user_event(game):
+def handle_user_event(game,soldier_location,grass):
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             game=False
             pygame.quit()
             sys.exit()
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ENTER:
-                screen.draw_matrix_screen()
+            if event.key == pygame.K_KP_ENTER:
+                screen.grid(soldier_location)
                 pygame.time.wait(1000)
+                screen.background_normal(grass,soldier_location)
 
-
-            if event.key == pygame.K_RIGHT:
-               if consts.X_LOCATION != consts.MAT_COL - 1:
-                   consts.X_LOCATION += 1
+            elif event.key == pygame.K_RIGHT:
+               if soldier_location[0]!=consts.SCREEN_WIDTH:
+                   soldier_location[0]+=consts.PIXEL_PER_BLOCK_COL
+                   screen.solider_draw(soldier_location)
+                   pygame.display.flip()
 
             elif event.key == pygame.K_LEFT:
-                if consts.X_LOCATION != 0:
-                    consts.X_LOCATION -= 1
+                if soldier_location[0] != 0:
+                    soldier_location[0] -= consts.PIXEL_PER_BLOCK_COL
+                    screen.solider_draw(soldier_location)
+                    pygame.display.flip()
 
             elif event.key == pygame.K_DOWN:
-                if consts.Y_LOCATION != consts.MAT_ROW - 1:
-                    consts.Y_LOCATION += 1
+                if soldier_location[1] != consts.SCREEN_HEIGHT:
+                    soldier_location[1] += consts.PIXEL_PER_BLOCK_ROW
+                    screen.solider_draw(soldier_location)
+                    pygame.display.flip()
 
             elif event.key == pygame.K_UP:
-                if consts.Y_LOCATION != 0:
-                    consts.Y_LOCATION -= 1
+                if soldier_location[1] != 0:
+                    soldier_location[1] -= consts.PIXEL_PER_BLOCK_ROW
+                    screen.solider_draw(soldier_location)
+                    pygame.display.flip()
 
-    return game
+    return game,soldier_location
 
 
 
