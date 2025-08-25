@@ -4,9 +4,9 @@ import sys
 
 
 def create_field (game_field):
-    for row in range (1, consts.MAT_ROW +1 ):
+    for row in range (0, consts.MAT_ROW -1 ):
         x = []
-        for col in range (1, consts.MAT_COL + 1):
+        for col in range (0, consts.MAT_COL - 1):
             dict_cal={}
             dict_cal["x_location"]=row*30
             dict_cal["y_location"]=col*30
